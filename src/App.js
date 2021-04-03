@@ -1,24 +1,14 @@
 import React from 'react'
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  // theme,
-  Button,
-} from '@chakra-ui/react'
+import { ChakraProvider, Box } from '@chakra-ui/react'
 // import { Button } from './extendedComponents/Button'
 import theme from './theme/theme'
-import { ColorModeSwitcher } from './ColorModeSwitcher'
+// import { ColorModeSwitcher } from './ColorModeSwitcher'
 import AddSizesForm from './components/form/AddSizesForm'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box bg="#FAF7FC" minH="100vh">
+      <Box bg="#FAF7FC" minH="100vh" fontWeight="bold">
         <AddSizesForm />
         {/* <ColorModeSwitcher justifySelf="flex-end" />
         <VStack spacing={8}>
