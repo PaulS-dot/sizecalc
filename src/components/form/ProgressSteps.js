@@ -42,12 +42,7 @@ const ProgressStep = ({ children, isDone, isCurrent }) => {
 
 const ProgressWithSteps = props => {
   const { children, value } = props
-  //   let lastStep = 0
-  //   useEffect(() => {
-  //     lastStep = children.length - 1
-  //   }, [children])
   const lastStep = useRef(children.length - 1)
-  console.log(lastStep)
 
   return (
     <Flex align="center" pos="relative" w="300px">

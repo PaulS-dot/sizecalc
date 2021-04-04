@@ -4,7 +4,6 @@ import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const FormCard = props => {
   const { title, children, secondaryButton = 'back' } = props
-  console.log(props)
 
   return (
     <Center>
