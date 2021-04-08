@@ -4,12 +4,15 @@ import { ChakraProvider, Box } from '@chakra-ui/react'
 import theme from './theme/theme'
 // import { ColorModeSwitcher } from './ColorModeSwitcher'
 import AddSizesForm from './components/form/AddSizesForm'
+import CardContextProvider from './contexts/CardContext'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box bg="#FAF7FC" minH="100vh" fontWeight="bold">
-        <AddSizesForm />
+        <CardContextProvider>
+          <AddSizesForm />
+        </CardContextProvider>
         {/* <ColorModeSwitcher justifySelf="flex-end" />
         <VStack spacing={8}>
           <Button>bruh</Button>
