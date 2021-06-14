@@ -7,7 +7,7 @@ const FormHeader = props => {
   return (
     <VStack w="100vw" mb="10">
       <Heading fontSize="md" mt="8" color="purple.700">
-        Dodawanie Rozmiarów
+        Przeliczanie rozmiarów
       </Heading>
       <ProgressWithSteps value={props.step}>
         <ProgressStep>płeć</ProgressStep>

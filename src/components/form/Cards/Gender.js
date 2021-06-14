@@ -26,7 +26,7 @@ const Gender = () => {
 
   return (
     <FormCard title="Wybierz swoją płeć" secondaryButton="cancel" card="Gender">
-      <HStack spacing="6" mb="10" {...group}>
+      <HStack spacing="6" {...group}>
         {options.map(({ name, label, icon }) => {
           const radio = getRadioProps({ value: name })
           return (

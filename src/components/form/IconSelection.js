@@ -27,6 +27,9 @@ const IconSelection = props => {
           _groupChecked={{
             borderColor: 'purple.400',
           }}
+          // _groupFocus={{
+          //   shadow: 'outline',
+          // }}
           transition="all 0.1s ease-out"
         >
           <Icon

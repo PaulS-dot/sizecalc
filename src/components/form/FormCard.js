@@ -1,19 +1,18 @@
 import React, { useContext } from 'react'
-import { Center, Flex, Heading } from '@chakra-ui/layout'
+import { Center, Flex, Heading, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { CardContext } from '../../contexts/CardContext'
 
 const FormCard = props => {
-  const { currentCard, setNextCard } = useContext(CardContext)
+  const { currentCard, setNextCard, setPrevCard } = useContext(CardContext)
 
   const { title, children, card, secondaryButton = 'back' } = props
 
-  const handleCancel = e => {
-    console.log(e)
+  const handleBack = e => {
+    setPrevCard()
   }
 
   const handleNext = e => {
-    // setCurrentCard('Categories')
     setNextCard()
   }
 
@@ -25,15 +24,19 @@ const FormCard = props => {
         flexFlow="column"
         alignItems="center"
         minW="500px"
+        px="10"
       >
-        <Heading fontSize="xl" color="222222" mb="6">
+        <Heading fontSize="xl" color="222222" mb="1">
           {title}
         </Heading>
+        <Text fontSize="xs" mb="6" color="gray.800" opacity="30%">
+          {props.description}
+        </Text>
 
         {children}
 
-        <ButtonGroup size="md" spacing="4">
-          <Button variant="ghost" onClick={handleCancel}>
+        <ButtonGroup size="md" spacing="4" mt="10">
+          <Button variant="ghost" onClick={handleBack}>
             {secondaryButton === 'back' ? 'wstecz' : 'anuluj'}
           </Button>
           <Button onClick={handleNext}>Dalej</Button>

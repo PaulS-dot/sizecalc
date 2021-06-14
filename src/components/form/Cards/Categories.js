@@ -1,46 +1,34 @@
 import { HStack } from '@chakra-ui/layout'
-import { useRadioGroup } from '@chakra-ui/radio'
+import { useCheckboxGroup } from '@chakra-ui/checkbox'
 import React, { useState } from 'react'
 import FormCard from '../FormCard'
-import IconSelection from '../IconSelection'
-import { AiOutlineMan, AiOutlineWoman } from 'react-icons/ai'
+import IconCheckbox from '../IconCheckbox'
+import categoriesOptions from './categoriesOptions'
 
-const options = [
-  { name: 'woman', label: 'kobieta', icon: AiOutlineWoman },
-  { name: 'man', label: 'mężczyzna', icon: AiOutlineMan },
-]
-
-const Categories = () => {
-  const [currentCard, setCurrentCard] = useState(0)
-
+const Categories = ({ setCategories }) => {
   const handleRadioSelect = selection => {
     console.log(selection)
+    setCategories(selection)
   }
 
-  //   const { getRootProps, getRadioProps } = useRadioGroup({
-  //     name: 'gender',
-  //     defaultValue: 'woman',
-  //     onChange: handleRadioSelect,
-  //   })
-
-  //   const group = getRootProps()
+  const { getCheckboxProps } = useCheckboxGroup({
+    name: 'categories',
+    onChange: handleRadioSelect,
+  })
 
   return (
-    <FormCard
-      title="Wybierz kategorie"
-      secondaryButton="cancel"
-      card="Categories"
-    >
-      <HStack spacing="6" mb="10" /*{...group}*/>
-        {options.map(({ name, label, icon }) => {
-          // const radio = getRadioProps({ value: name })
+    <FormCard title="Wybierz kategorie" card="Categories">
+      <HStack spacing="6" /*{...group}*/>
+        {categoriesOptions.map(({ name, label, iconPath }) => {
+          const checkbox = getCheckboxProps({ value: name })
           return (
-            <IconSelection
-              icon={icon}
+            <IconCheckbox
+              iconPath={iconPath}
               label={label}
               key={name}
-              isCheckbox={true}
-              // {...radio}
+              name={name}
+              setCategories={setCategories}
+              {...checkbox}
             />
           )
         })}
