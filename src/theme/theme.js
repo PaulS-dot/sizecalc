@@ -5,19 +5,19 @@ import { colors } from './colors'
 // import { Global, css } from '@emotion/react'
 
 const theme = extendTheme({
-  styles: {
-    global: {
-      '.js-focus-visible :focus:not([data-focus-visible-added])': {
-        outline: 'none',
-        boxShadow: 'none',
-      },
-    },
-  },
+  // styles: {
+  //   global: {
+  //     '.js-focus-visible :focus:not([data-focus-visible-added])': {
+  //       outline: 'none',
+  //       boxShadow: 'none',
+  //     },
+  //   },
+  // },
   colors,
-  fonts: {
-    body: 'Montserrat',
-    heading: 'Montserrat',
-  },
+  // fonts: {
+  //   body: 'Montserrat',
+  //   heading: 'Montserrat',
+  // },
 
   components: {
     Button,

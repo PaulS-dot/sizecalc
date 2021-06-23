@@ -1,10 +1,8 @@
-import { Box, HStack, VStack } from '@chakra-ui/layout'
+import { VStack } from '@chakra-ui/layout'
 import React, { useState, useContext, useRef } from 'react'
-import { useRadioGroup } from '@chakra-ui/radio'
 import FormHeader from './FormHeader'
 import { Gender, Categories, Measures } from './cards'
 import { CardContext } from '../../contexts/CardContext'
-import { measuresFields } from './cards/measuresFields'
 
 // const cards = ['Gender', 'Categories', 'Measures']
 
@@ -29,10 +27,10 @@ const AddSizesForm = () => {
   const { currentCard, currentCardIndex } = useContext(CardContext)
 
   return (
-    <VStack>
+    <>
       <FormHeader step={currentCardIndex}></FormHeader>
       <DisplayCard currentCard={currentCard}></DisplayCard>
-    </VStack>
+    </>
   )
 }
 

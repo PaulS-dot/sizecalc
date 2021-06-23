@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import { Center, Flex, Heading, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { CardContext } from '../../contexts/CardContext'
+import styled from 'styled-components'
+
+const 
 
 const FormCard = props => {
   const { currentCard, setNextCard, setPrevCard } = useContext(CardContext)
