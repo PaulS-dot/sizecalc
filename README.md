@@ -26,3 +26,5 @@ $ cd ../sizecalc
 $ npm install
 $ npm start
 ```
+
+.
