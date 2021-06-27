@@ -5,6 +5,7 @@ import { CardContext } from '../../contexts/CardContext'
 import FormCardContainer from '../../styled/FormCard.styled'
 import HCenter from '../../styled/HCenter.styled'
 import Heading from '../../styled/Heading.styled'
+import Description from '../../styled/Description.styled'
 
 const FormCard = props => {
   const { currentCard, setNextCard, setPrevCard } = useContext(CardContext)
@@ -28,9 +29,9 @@ const FormCard = props => {
         <Heading>
           <h2> {title} </h2>
         </Heading>
-        <Text fontSize="xs" mb="6" color="gray.800" opacity="30%">
-          {props.description}
-        </Text>
+        {/* <Text fontSize="xs" mb="6" color="gray.800" opacity="30%"> */}
+        <Description>{props.description}</Description>
+        {/* </Text> */}
         {children}
         <ButtonGroup size="md" spacing="4" mt="10">
           <Button variant="ghost" onClick={handleBack}>
