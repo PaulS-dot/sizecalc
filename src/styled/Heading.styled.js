@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 
 const Heading = styled.header`
-    /* font-weight: bold; */
+  & h1 {
+    font-size: 1.25rem;
+  }
+
+  & h2 {
+    font-size: 1.15rem;
+  }
 `
 
 export default Heading
