@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
-import { Center, Flex, Heading, Text } from '@chakra-ui/layout'
+import { Center, Flex, Text } from '@chakra-ui/layout'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { CardContext } from '../../contexts/CardContext'
-import StyledFormCard from '../../styled/FormCard.styled'
+import FormCardContainer from '../../styled/FormCard.styled'
 import HCenter from '../../styled/HCenter.styled'
+import Heading from '../../styled/Heading.styled'
 
 const FormCard = props => {
   const { currentCard, setNextCard, setPrevCard } = useContext(CardContext)
@@ -20,18 +21,12 @@ const FormCard = props => {
 
   return (
     <HCenter>
-      <StyledFormCard>
-      {/* <Center>
-        <Flex
-          layerStyle="base"
-          py="3"
-          flexFlow="column"
-          alignItems="center"
-          minW="500px"
-          px="10"
-        > */}
-          <Heading fontSize="xl" color="222222" mb="1">
+      <FormCardContainer>
+          {/* <Heading fontSize="xl" color="222222" mb="1">
             {title}
+          </Heading> */}
+          <Heading>
+            <h1> {title} </h1>
           </Heading>
           <Text fontSize="xs" mb="6" color="gray.800" opacity="30%">
             {props.description}
@@ -43,10 +38,8 @@ const FormCard = props => {
             </Button>
             <Button onClick={handleNext}>Dalej</Button>
           </ButtonGroup>
-        {/* </Flex>
-      </Center> */}
-      </StyledFormCard>
 
+      </FormCardContainer>
     </HCenter>
   )
 }

@@ -14,10 +14,10 @@ const theme = extendTheme({
   //   },
   // },
   colors,
-  // fonts: {
-  //   body: 'Montserrat',
-  //   heading: 'Montserrat',
-  // },
+  fonts: {
+    body: 'Montserrat',
+    heading: 'Montserrat',
+  },
 
   components: {
     Button,
