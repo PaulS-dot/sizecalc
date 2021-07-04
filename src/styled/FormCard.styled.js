@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const FormCardContainer = styled.div`
+export const FormCardContainer = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -11,5 +11,3 @@ const FormCardContainer = styled.div`
   /* box-sizing: border-box; */
   border-radius: 20px;
 `
-
-export default FormCardContainer

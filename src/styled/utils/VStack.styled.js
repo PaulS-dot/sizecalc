@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const HStack = styled.div`
   display: flex;
+  flex-flow: column;
   margin-top: ${props => props.mt};
   justify-content: center;
 

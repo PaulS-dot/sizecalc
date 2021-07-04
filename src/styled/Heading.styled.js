@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Heading = styled.header`
+export const Heading = styled.header`
   & h1 {
     font-size: 1.25rem;
   }
@@ -9,5 +9,3 @@ const Heading = styled.header`
     font-size: 1.15rem;
   }
 `
-
-export default Heading
