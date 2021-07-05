@@ -17,7 +17,12 @@ const Categories = ({ setCategories }) => {
   })
 
   return (
-    <FormCard title="Wybierz kategorie" card="Categories">
+    <FormCard
+      title="Wybierz kategorie"
+      card="Categories"
+      nextCardPath="/measures"
+      prevCardPath="/gender"
+    >
       <HStack spacing="6" /*{...group}*/>
         {categoriesOptions.map(({ name, label, iconPath }) => {
           const checkbox = getCheckboxProps({ value: name })

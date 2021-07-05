@@ -5,22 +5,17 @@ import { FormCardContainer } from '../../styled/FormCard.styled'
 import { HCenter } from '../../styled/utils/HCenter.styled'
 import { HStack } from '../../styled/utils/HStack.styled'
 import { Heading } from '../../styled/Heading.styled'
-// import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Button } from '../../styled/Button.styled'
 import { Description } from '../../styled/Description.styled'
 
 const FormCard = props => {
-  const { currentCard, setNextCard, setPrevCard } = useContext(CardContext)
-
-  const { title, children, card, secondaryButton = 'back' } = props
-
-  const handleBack = e => {
-    setPrevCard()
-  }
-
-  const handleNext = e => {
-    setNextCard()
-  }
+  const {
+    title,
+    children,
+    secondaryButton = 'back',
+    nextCardPath,
+    prevCardPath,
+  } = props
 
   return (
     <HCenter>
@@ -33,10 +28,10 @@ const FormCard = props => {
         {children}
 
         <HStack spacing="16px" mt="32px">
-          <Button variant="ghost" onClick={handleBack}>
+          <Button variant="ghost" to={prevCardPath}>
             {secondaryButton === 'back' ? 'wstecz' : 'anuluj'}
           </Button>
-          <Button onClick={handleNext}>Dalej</Button>
+          <Button to={nextCardPath}>Dalej</Button>
         </HStack>
       </FormCardContainer>
     </HCenter>

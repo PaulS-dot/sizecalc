@@ -25,7 +25,13 @@ const Gender = () => {
   const group = getRootProps()
 
   return (
-    <FormCard title="Wybierz swoją płeć" secondaryButton="cancel" card="Gender">
+    <FormCard
+      title="Wybierz swoją płeć"
+      secondaryButton="cancel"
+      card="Gender"
+      nextCardPath="/categories"
+      prevCardPath="/"
+    >
       <HStack spacing="6" {...group}>
         {options.map(({ name, label, icon }) => {
           const radio = getRadioProps({ value: name })

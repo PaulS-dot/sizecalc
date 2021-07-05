@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const handleButtonType = props => {
@@ -27,7 +28,7 @@ const handleButtonType = props => {
 /**
  * @param {string} variant change button type
  */
-export const Button = styled.button`
+export const Button = styled(Link)`
   text-transform: uppercase;
   font-weight: bold;
   padding: 0.5rem 1rem;

@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
         font-weight: bold;
         background-color: #FAF7FC;
+        background-color: #222;
         font-family: 'Montserrat', sans-serif;
         padding: 0;
         margin: 0;
