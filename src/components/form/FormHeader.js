@@ -3,7 +3,7 @@ import { Progress } from '@chakra-ui/progress'
 import React from 'react'
 import { ProgressWithSteps, ProgressStep } from './ProgressSteps'
 
-const FormHeader = props => {
+export const FormHeader = props => {
   return (
     <VStack w="100vw" mb="10">
       <Heading fontSize="md" mt="8" color="purple.700">
@@ -17,5 +17,3 @@ const FormHeader = props => {
     </VStack>
   )
 }
-
-export default FormHeader

@@ -7,16 +7,23 @@ import AddSizesForm from './components/form/AddSizesForm'
 import CardContextProvider from './contexts/CardContext'
 import { GlobalStyles } from './styled/Global.styled'
 import { ThemeProvider } from 'styled-components'
+import { RecoilRoot } from 'recoil'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
     // <ChakraProvider theme={theme}>
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <CardContextProvider>
-        <AddSizesForm />
-      </CardContextProvider>
-    </ThemeProvider>
+
+    <BrowserRouter>
+      <RecoilRoot>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <CardContextProvider>
+            <AddSizesForm />
+          </CardContextProvider>
+        </ThemeProvider>
+      </RecoilRoot>
+    </BrowserRouter>
     // </ChakraProvider>
   )
 }
