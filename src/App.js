@@ -10,14 +10,14 @@ import { ThemeProvider } from 'styled-components'
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <ThemeProvider>
-        <GlobalStyles />
-        <CardContextProvider>
-          <AddSizesForm />
-        </CardContextProvider>
-      </ThemeProvider>
-    </ChakraProvider>
+    // <ChakraProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <CardContextProvider>
+        <AddSizesForm />
+      </CardContextProvider>
+    </ThemeProvider>
+    // </ChakraProvider>
   )
 }
 

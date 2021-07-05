@@ -1,23 +1,22 @@
 import styled from 'styled-components'
 
-const handleButtonType = variant => {
-  console.log(variant)
-  switch (variant) {
+const handleButtonType = props => {
+  switch (props.variant) {
     case 'ghost':
       return `
-        color: #e8bef6;
+        color: ${props.theme.colors.purple[100]};
 
         &:hover {
-          color: #c569e3;
-          background: #fbefff;
+          color: ${props.theme.colors.purple[300]};
+          background: ${props.theme.colors.purple[10]};
         }
 
       `
 
     default:
       return `
-      background: linear-gradient(90deg, #bf5ae0 0%, #a811da 100%);
-      color: white;
+      background: ${props.theme.colors.purple.gradient};
+      color: ${props.theme.colors.white};
       &:hover {
         opacity: 0.9;
       }
@@ -36,6 +35,7 @@ export const Button = styled.button`
   border-radius: 8px;
   width: 7.2rem;
   transition: all 0.1s ease-out;
+  font-size: 1rem;
 
-  ${({ variant }) => handleButtonType(variant)}
+  ${props => handleButtonType(props)}
 `

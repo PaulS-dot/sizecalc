@@ -15,7 +15,7 @@ export const colors = {
     900: '#0d0d0d',
   },
   purple: {
-    gradient: 'linear-gradient(to left, #BF5AE0, #A811DA)',
+    gradient: 'linear-gradient(to right, #BF5AE0, #A811DA)',
     10: '#fbefff',
     50: '#fbe8ff',
     100: '#e8bef6',

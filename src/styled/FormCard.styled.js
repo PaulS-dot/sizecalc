@@ -6,8 +6,8 @@ export const FormCardContainer = styled.div`
   align-items: center;
   padding: 8px 32px;
   min-width: 500px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.white};
+  /* border: 1px solid ${({ theme }) => theme.colors.purple['50']}; */
   border: 1px solid #e5e2f0;
-  /* box-sizing: border-box; */
   border-radius: 20px;
 `
