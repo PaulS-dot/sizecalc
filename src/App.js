@@ -6,14 +6,17 @@ import theme from './theme/theme'
 import AddSizesForm from './components/form/AddSizesForm'
 import CardContextProvider from './contexts/CardContext'
 import { GlobalStyles } from './styled/Global.styled'
+import { ThemeProvider } from 'styled-components'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <GlobalStyles />
-      <CardContextProvider>
-        <AddSizesForm />
-      </CardContextProvider>
+      <ThemeProvider>
+        <GlobalStyles />
+        <CardContextProvider>
+          <AddSizesForm />
+        </CardContextProvider>
+      </ThemeProvider>
     </ChakraProvider>
   )
 }
