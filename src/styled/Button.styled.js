@@ -1,23 +1,23 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const handleButtonType = props => {
-  switch (props.variant) {
+const handleButtonType = ({ theme, variant }) => {
+  switch (variant) {
     case 'ghost':
       return `
-        color: ${props.theme.colors.purple[100]};
+        color: ${theme.colors.purple[100]};
 
         &:hover {
-          color: ${props.theme.colors.purple[300]};
-          background: ${props.theme.colors.purple[10]};
+          color: ${theme.colors.purple[300]};
+          background: ${theme.colors.purple[10]};
         }
 
       `
 
     default:
       return `
-      background: ${props.theme.colors.purple.gradient};
-      color: ${props.theme.colors.white};
+      background: ${theme.colors.purple.gradient};
+      color: ${theme.colors.white};
       &:hover {
         opacity: 0.9;
       }
@@ -37,6 +37,8 @@ export const Button = styled(Link)`
   width: 7.2rem;
   transition: all 0.1s ease-out;
   font-size: 1rem;
-
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
   ${props => handleButtonType(props)}
 `

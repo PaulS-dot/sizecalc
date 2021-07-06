@@ -1,10 +1,10 @@
-import { HStack } from '@chakra-ui/layout'
 import { useRadioGroup } from '@chakra-ui/radio'
 import React, { useContext } from 'react'
 import FormCard from '../FormCard'
 import IconSelection from '../IconSelection'
 import { AiOutlineMan, AiOutlineWoman } from 'react-icons/ai'
 // import { CardContext } from '../../../contexts/CardContext'
+import { HStack } from '../../../styled/utils'
 
 const options = [
   { name: 'woman', label: 'kobieta', icon: AiOutlineWoman },
@@ -32,7 +32,7 @@ const Gender = () => {
       nextCardPath="/categories"
       prevCardPath="/"
     >
-      <HStack spacing="6" {...group}>
+      <HStack spacing="16px" {...group}>
         {options.map(({ name, label, icon }) => {
           const radio = getRadioProps({ value: name })
           return (

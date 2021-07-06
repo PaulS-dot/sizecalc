@@ -1,15 +1,26 @@
 import Icon from '@chakra-ui/icon'
-import { VStack, Text, Center, Box } from '@chakra-ui/layout'
+import { Text, Center, Box } from '@chakra-ui/layout'
 import { useRadio } from '@chakra-ui/radio'
 import React from 'react'
 import { IconContext } from 'react-icons/lib'
+import {
+  IconWrapper,
+  IconSelectionLabel,
+  StyledIconSelection,
+} from 'src/styled/IconSelection.styled'
+import { VStack } from 'src/styled/utils'
 import theme from '../../theme/theme'
 
 const IconSelection = props => {
-  const { icon, label } = props
-
+  const { icon: Icon, label } = props
+  console.log(label)
   return (
-    <VStack></VStack>
+    <StyledIconSelection spacing="0.1rem">
+      <IconWrapper>
+        <Icon />
+      </IconWrapper>
+      <IconSelectionLabel>{label}</IconSelectionLabel>
+    </StyledIconSelection>
 
     // <Box as="label">
     //   <VStack role="group" cursor="pointer">
