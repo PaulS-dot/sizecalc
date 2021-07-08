@@ -2,13 +2,17 @@ import styled from 'styled-components'
 import { VStack } from './utils'
 
 export const IconWrapper = styled.div`
+  border: 2px solid ${({ theme }) => theme.colors.gray[50]};
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  transition: all 0.1s ease-out;
+
   & > svg {
-    width: 5rem;
-    height: 5rem;
-    border: 2px solid ${({ theme }) => theme.colors.gray[50]};
-    border-radius: 1rem;
-    padding: 0.5rem;
-    transition: all 0.1s ease-out;
+    width: 100%;
+    height: 100%;
   }
 `
 
@@ -20,39 +24,18 @@ export const IconSelectionLabel = styled.div`
 `
 
 export const StyledIconSelection = styled(VStack)`
-  cursor: pointer;
+  position: relative;
   color: ${({ theme }) => theme.colors.gray[300]};
 
-  &:hover svg {
+  & input:checked ~ * {
+    color: ${({ theme }) => theme.colors.gray[700]};
+  }
+
+  & input:checked ~ ${IconWrapper} {
+    border: 2px solid purple;
+  }
+
+  &:hover ${IconWrapper} {
     border: 2px solid ${({ theme }) => theme.colors.gray[300]};
   }
 `
-//     <Center
-//       w="80px"
-//       h="80px"
-//       borderColor="gray.50"
-//       borderWidth="2px"
-//       borderRadius="10px"
-//       _groupHover={{
-//         borderColor: 'gray.400',
-//       }}
-//       _groupChecked={{
-//         borderColor: 'purple.400',
-//       }}
-//       // _groupFocus={{
-//       //   shadow: 'outline',
-//       // }}
-//       transition="all 0.1s ease-out"
-//     >
-//       <Icon
-//         as={icon}
-//         boxSize="60px"
-//         color="gray.300"
-//         _groupChecked={{ color: 'gray.700' }}
-//       />
-//     </Center>
-//     <Text
-//       fontSize="xs"
-//       color="gray.300"
-//       _groupChecked={{ color: 'gray.700' }}
-//     >

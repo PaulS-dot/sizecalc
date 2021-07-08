@@ -4,7 +4,7 @@ import { CardContext } from '../../contexts/CardContext'
 import { FormCardContainer } from '../../styled/FormCard.styled'
 import { HCenter } from '../../styled/utils/HCenter.styled'
 import { HStack } from '../../styled/utils/HStack.styled'
-import { Heading } from '../../styled/Heading.styled'
+import { H2 } from '../../styled/Headers.styled'
 import { Button } from '../../styled/Button.styled'
 import { Description } from '../../styled/Description.styled'
 
@@ -15,15 +15,15 @@ const FormCard = props => {
     secondaryButton = 'back',
     nextCardPath,
     prevCardPath,
+    description,
   } = props
 
   return (
     <HCenter>
       <FormCardContainer>
-        <Heading>
-          <h2> {title} </h2>
-        </Heading>
-        <Description>{props.description}</Description>
+        <H2>{title}</H2>
+        <Description></Description>
+        {/* {description ? <Descriptio1n>{description}</Description> : null} */}
 
         {children}
 

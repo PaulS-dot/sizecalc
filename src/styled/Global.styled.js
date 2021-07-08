@@ -4,16 +4,19 @@ export const GlobalStyles = createGlobalStyle`
     body {
         font-weight: bold;
         background-color: #FAF7FC;
-        background-color: #222;
+        /* background-color: #222; */
         font-family: 'Montserrat', sans-serif;
         padding: 0;
-        margin: 0;
     }
 
     button {
         background: none;
         border: none;
         cursor: pointer;
+    }
+
+    h1, h2, h3, body, p {
+        margin: 0;
     }
 
     input, textarea, button {font-family: inherit}

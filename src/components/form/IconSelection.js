@@ -9,13 +9,15 @@ import {
   StyledIconSelection,
 } from 'src/styled/IconSelection.styled'
 import { VStack } from 'src/styled/utils'
+import { InvisibleInput } from 'src/styled/utils/InvisibleInput.styled'
 import theme from '../../theme/theme'
 
 const IconSelection = props => {
-  const { icon: Icon, label } = props
+  const { icon: Icon, label, radioName } = props
   console.log(label)
   return (
     <StyledIconSelection spacing="0.1rem">
+      <InvisibleInput type="radio" name={radioName} />
       <IconWrapper>
         <Icon />
       </IconWrapper>

@@ -29,6 +29,7 @@ const Gender = () => {
       title="Wybierz swoją płeć"
       secondaryButton="cancel"
       card="Gender"
+      description="dj  sdfjojhosud fijosdf iosdfisdf"
       nextCardPath="/categories"
       prevCardPath="/"
     >
@@ -36,7 +37,13 @@ const Gender = () => {
         {options.map(({ name, label, icon }) => {
           const radio = getRadioProps({ value: name })
           return (
-            <IconSelection icon={icon} label={label} key={name} {...radio} />
+            <IconSelection
+              radioName="gender"
+              icon={icon}
+              label={label}
+              key={name}
+              {...radio}
+            />
           )
         })}
       </HStack>
