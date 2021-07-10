@@ -1,10 +1,12 @@
-import { Box, Heading, VStack, Flex, Center, Text } from '@chakra-ui/layout'
+import { Box, Heading, Flex, Center, Text } from '@chakra-ui/layout'
 import React from 'react'
 import { ProgressWithSteps, ProgressStep } from './ProgressSteps'
+import { FormHeaderContainer } from './FormHeader.styled'
 
+// <VStack w="100vw" mb="10">
 export const FormHeader = props => {
   return (
-    <VStack w="100vw" mb="10">
+    <FormHeaderContainer>
       <Heading fontSize="md" mt="8" color="purple.700">
         Przeliczanie rozmiarów
       </Heading>
@@ -13,6 +15,6 @@ export const FormHeader = props => {
         <ProgressStep>kategoria</ProgressStep>
         <ProgressStep>pomiary</ProgressStep>
       </ProgressWithSteps>
-    </VStack>
+    </FormHeaderContainer>
   )
 }
