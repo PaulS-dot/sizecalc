@@ -1,5 +1,4 @@
 import { Box, Heading, VStack, Flex, Center, Text } from '@chakra-ui/layout'
-import { Progress } from '@chakra-ui/progress'
 import React from 'react'
 import { ProgressWithSteps, ProgressStep } from './ProgressSteps'
 

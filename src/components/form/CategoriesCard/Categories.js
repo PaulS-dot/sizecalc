@@ -1,7 +1,7 @@
 import { HStack } from '@chakra-ui/layout'
 import { useCheckboxGroup } from '@chakra-ui/checkbox'
 import React, { useState } from 'react'
-import FormCard from '../FormCard'
+import FormCard from '../FormCard/FormCard'
 import IconCheckbox from '../IconCheckbox'
 import categoriesOptions from './categoriesOptions'
 

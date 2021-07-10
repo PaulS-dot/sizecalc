@@ -1,5 +1,5 @@
 import icons from './CategoriesIcons'
-import { measuresFields } from './measuresFields'
+import { measuresFields } from 'src/constants/measuresFields'
 
 const options = [
   {

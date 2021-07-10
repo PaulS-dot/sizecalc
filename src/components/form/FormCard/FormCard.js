@@ -1,12 +1,10 @@
-import React, { useContext } from 'react'
-// import { Center, Flex, Text } from '@chakra-ui/layout'
-import { CardContext } from '../../contexts/CardContext'
-import { FormCardContainer } from '../../styled/FormCard.styled'
-import { HCenter } from '../../styled/utils/HCenter.styled'
-import { HStack } from '../../styled/utils/HStack.styled'
-import { H2 } from '../../styled/Headers.styled'
-import { Button } from '../../styled/Button.styled'
-import { Description } from '../../styled/Description.styled'
+import React from 'react'
+import { FormCardContainer } from './FormCard.styled'
+import { HCenter } from 'src/styled/layout/HCenter.styled'
+import { HStack } from 'src/styled/layout/HStack.styled'
+import { H2 } from 'src/styled/Headers.styled'
+import { Button } from 'src/styled/Button.styled'
+import { Description } from 'src/styled/Description.styled'
 
 const FormCard = props => {
   const {
@@ -22,7 +20,7 @@ const FormCard = props => {
     <HCenter>
       <FormCardContainer>
         <H2>{title}</H2>
-        <Description></Description>
+        <Description>{description}</Description>
         {/* {description ? <Descriptio1n>{description}</Description> : null} */}
 
         {children}

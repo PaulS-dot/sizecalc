@@ -1,6 +1,6 @@
 import React from 'react'
-import { Categories } from '../components/form/cards'
-import { FormHeader } from '../components/form/FormHeader'
+import { Categories } from '../components/form/CategoriesCard/Categories'
+import { FormHeader } from '../components/form/FormHeader/FormHeader'
 
 export const CategoriesFormStep = () => {
   return (

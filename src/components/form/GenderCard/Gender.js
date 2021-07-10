@@ -1,10 +1,9 @@
-import { useRadioGroup } from '@chakra-ui/radio'
-import React, { useContext } from 'react'
-import FormCard from '../FormCard'
-import IconSelection from '../IconSelection'
+import React from 'react'
+import FormCard from '../FormCard/FormCard'
+import IconSelection from '../IconSelection/IconSelection'
 import { AiOutlineMan, AiOutlineWoman } from 'react-icons/ai'
 // import { CardContext } from '../../../contexts/CardContext'
-import { HStack } from '../../../styled/utils'
+import { HStack } from '../../../styled/layout'
 
 const options = [
   { name: 'woman', label: 'kobieta', icon: AiOutlineWoman },
@@ -16,14 +15,6 @@ const Gender = () => {
     console.log(selection)
   }
 
-  const { getRootProps, getRadioProps } = useRadioGroup({
-    name: 'gender',
-    defaultValue: 'woman',
-    onChange: handleRadioSelect,
-  })
-
-  const group = getRootProps()
-
   return (
     <FormCard
       title="Wybierz swoją płeć"
@@ -33,16 +24,14 @@ const Gender = () => {
       nextCardPath="/categories"
       prevCardPath="/"
     >
-      <HStack spacing="16px" {...group}>
+      <HStack spacing="16px">
         {options.map(({ name, label, icon }) => {
-          const radio = getRadioProps({ value: name })
           return (
             <IconSelection
               radioName="gender"
               icon={icon}
               label={label}
               key={name}
-              {...radio}
             />
           )
         })}

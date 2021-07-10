@@ -1,6 +1,6 @@
 import { Input } from '@chakra-ui/input'
 import React from 'react'
-import FormCard from '../FormCard'
+import FormCard from '../FormCard/FormCard'
 
 const Measures = () => {
   return (

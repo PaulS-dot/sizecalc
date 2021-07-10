@@ -1,7 +1,7 @@
 import { Progress } from '@chakra-ui/progress'
 import { Flex, Box, Text } from '@chakra-ui/layout'
 import React, { useRef } from 'react'
-import theme from '../../theme/theme'
+import theme from '../../../theme/theme'
 
 const STEP_CIRCLE_SIZE = 4
 

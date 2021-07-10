@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { VStack } from './utils'
+import { VStack } from '../../../styled/layout'
 
 export const IconWrapper = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.gray[50]};
@@ -32,7 +32,7 @@ export const StyledIconSelection = styled(VStack)`
   }
 
   & input:checked ~ ${IconWrapper} {
-    border: 2px solid purple;
+    border: 2px solid ${({ theme }) => theme.colors.purple[400]};
   }
 
   &:hover ${IconWrapper} {
