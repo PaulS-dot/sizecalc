@@ -2,41 +2,15 @@ import { Progress } from '@chakra-ui/progress'
 import { Flex, Box, Text } from '@chakra-ui/layout'
 import React, { useRef } from 'react'
 import theme from '../../../theme/theme'
-
-const STEP_CIRCLE_SIZE = 4
+import { StepDot, StepDotLabel } from './ProgressSteps.styled'
 
 const ProgressStep = ({ children, isDone, isCurrent }) => {
-  const color = isDone ? 'purple.400' : 'purple.100'
+  const color = isDone ? theme.colors.purple[400] : theme.colors.purple[100]
+  const border = isCurrent ? `2px solid ${color}` : 'none'
   return (
-    <Box
-      bg={color}
-      h={STEP_CIRCLE_SIZE}
-      w={STEP_CIRCLE_SIZE}
-      borderRadius="full"
-      pos="relative"
-      _after={{
-        content: '""',
-        pos: 'absolute',
-        left: '-25%',
-        top: '-25%',
-        w: '150%',
-        h: '150%',
-        border: isCurrent ? `2px solid ${theme.colors.purple[400]}` : 'none',
-        borderRadius: 'full',
-      }}
-    >
-      <Text
-        pos="absolute"
-        transform="translateX(-50%)"
-        left="50%"
-        color={color}
-        mt="5"
-        fontSize="xs"
-        textTransform="uppercase"
-      >
-        {children}
-      </Text>
-    </Box>
+    <StepDot color={color} border={border}>
+      <StepDotLabel color={color}>{children}</StepDotLabel>
+    </StepDot>
   )
 }
 
